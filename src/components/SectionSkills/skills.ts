@@ -30,7 +30,7 @@ export const skills = [
     imgFundo: "./img/php.svg",
     img: "https://img.shields.io/badge/-React-05122A?style=flat&logo=React",
     description:
-      "uso do padrão de projeto mvc:'model,view,controle', leve domínio da sintaxe ",
+      "uso do padrão de projeto mvc:'model,view,controle', leve domínio da sintaxegit ",
       saibaMais:'https://www.php.net/manual/pt_BR/language.constants.syntax.php'
   },
   {
