@@ -7,26 +7,24 @@ import { Button } from "../Button";
 import Sidebar from "../Sidebar";
 
 const Header = () => {
-  const [selectedImg, setSelectedImg] = useState(0);
+  const [selectedImg, setSelectedImg] = useState(1);
   useEffect(() => {
     const sequenceImage = () => {
       setTimeout(() => {
-        selectedImg === 3 ? setSelectedImg(0) : setSelectedImg(selectedImg + 1);
+        selectedImg === 3 ? setSelectedImg(1) : setSelectedImg(selectedImg + 1);
       }, 5000);
     };
     sequenceImage();
   }, [selectedImg]);
-
+console.log(selectedImg);
   return (
     <HeaderWrapper id="home">
       <Sidebar />
 
       <div className="imgContainer">
-        <Image
+        <img
           src={`/img/img-header${selectedImg}.jpg`}
-          alt="fundoHeader"
-          layout="fill"
-          objectFit='cover'
+          alt="fundoHeader"     
           className="img-header"
         />
       </div>

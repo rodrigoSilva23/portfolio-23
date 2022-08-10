@@ -26,7 +26,7 @@ export const SectionIntroduction = () => {
       </div>
       {startTextAnimed && (
         <TextAnimedWrite className="textAnimed text2 text-query" delay={9000}>
-           &nbsp;  &nbsp;aprender é navegar sem rumo e descobrir maravilhas que nunca
+           &nbsp; &nbsp;aprender é navegar sem rumo e descobrir maravilhas que nunca
           poderíamos imaginar.
         </TextAnimedWrite>
       )}

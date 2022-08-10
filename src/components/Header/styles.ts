@@ -17,17 +17,20 @@ export const HeaderWrapper = styled.div`
   .imgContainer {
     position:relative;
     width: 100%;
+    max-width: 100vw;
     height: 100vh;
     
     .img-header {
-      
-      position: fixed !important;
+      width: 100vw ;
+      height: 100vh;
+      position: fixed;
       opacity: 0.9;
       z-index: -1;
       animation: zoomHeader 1.5s ease-in 1;
     }
   }
   .Tilt {
+    min-width:275px;
     position: absolute;
     top: 30%;
     left: 10%;

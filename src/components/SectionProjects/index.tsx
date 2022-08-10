@@ -27,11 +27,22 @@ export const SectionProjects = () => {
         <Swiper
           loop={true}
           navigation={true}
-          slidesPerView={3}
+          slidesPerView={1}
           spaceBetween={30}
           pagination={{ clickable: true }}
           modules={[FreeMode, Navigation, Thumbs, EffectFade]}
           className="container-carousel"
+          breakpoints= {{
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            },
+            480: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            }
+
+          }}
         >
           {skills.map((item) => {
             return (

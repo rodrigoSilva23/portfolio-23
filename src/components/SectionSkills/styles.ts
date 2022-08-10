@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionSkillsContainer = styled.section`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: white;
   padding-bottom: 20px;
   background-image: radial-gradient(
@@ -18,7 +18,7 @@ export const SectionSkillsContainer = styled.section`
     text-align: center;
   }
   .container-carousel {
-    width: 30vw;
+    width: 40%;
     height: 80vh;
     .swiper-button-prev {
       left: -65px;
@@ -92,6 +92,17 @@ export const SectionSkillsContainer = styled.section`
       margin: 5px;
       width: 100px;
       height: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container-carousel {
+    width: 50%;
+    }
+  }
+  @media (max-width: 425px) {
+    .container-carousel {
+    width: 70%;
     }
   }
 `;

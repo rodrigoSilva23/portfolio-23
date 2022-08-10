@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       setLoading(!loading);
   }, []);
   return (
-    <div>
+    <>
       <Head>
         <title>Rodrigo-Dev</title>
         <link rel="icon" type="image/png" href="/link-icon.png" />
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           <Footer />
         </>
       )}
-    </div>
+    </>
   );
 };
 
