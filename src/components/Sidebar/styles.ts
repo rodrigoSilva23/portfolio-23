@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SidebarClassic = styled.div`
+
   .sidebar {
     width: 20rem;
     height: 100vh;
@@ -9,7 +10,7 @@ export const SidebarClassic = styled.div`
     top: 0;
     right: -18rem;
     transition: 1.5s;
-    z-index: 1;
+    z-index: 10;
   }
 
   .show-menu {
@@ -21,8 +22,8 @@ export const SidebarClassic = styled.div`
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
-    right: 2rem;
+    z-index: 1000;
+    right: 2.5rem;
     top: 2rem;
     display: flex;
     flex-direction: column;
@@ -43,7 +44,7 @@ export const SidebarClassic = styled.div`
     transition: transform 1s;
   }
 
-  .show-menu #line2 {
+  .show-menu #line2{
     opacity: 0;
   }
 

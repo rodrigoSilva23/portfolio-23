@@ -4,7 +4,6 @@ import Image from "next/image";
 
 import { useEffect, useState } from "react";
 import { Button } from "../Button";
-import Sidebar from "../Sidebar";
 
 const Header = () => {
   const [selectedImg, setSelectedImg] = useState(1);
@@ -19,7 +18,7 @@ const Header = () => {
 console.log(selectedImg);
   return (
     <HeaderWrapper id="home">
-      <Sidebar />
+   
 
       <div className="imgContainer">
         <img

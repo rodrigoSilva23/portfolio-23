@@ -7,6 +7,7 @@ import { Loading } from "../components/Loading";
 import { SectionIntroduction } from "../components/SectionIntroduction";
 import { SectionProjects } from "../components/SectionProjects";
 import {SectionSkills } from "../components/SectionSkills";
+import Sidebar from "../components/Sidebar";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
         <Loading />
       ) : (
         <>
+           <Sidebar />
           <Header />
           <SectionIntroduction/>
           <SectionSkills/>
