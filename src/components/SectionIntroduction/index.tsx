@@ -11,7 +11,7 @@ export const SectionIntroduction = () => {
     if (getPositionScroll >= 170) SetStartTextAnimed(true)
     
   });
-  
+  console.log(window.innerWidth)
   return (
     <SectionProfile id="conhecimentos">
       {startTextAnimed && (

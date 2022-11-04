@@ -1,4 +1,4 @@
-import { Console } from "console";
+
 import { useEffect, useState } from "react";
 import { TextAnimed } from "./styles";
 
@@ -6,7 +6,8 @@ interface PropsTextContent {
   children: any;
   className?: string;
   delay?: number;
-  animationDuration?:string
+  animationDuration?:string;
+  pipeAnimed?: boolean;
 }
 
 export const TextContent = ({ children }: PropsTextContent) => {
@@ -17,11 +18,14 @@ export const TextAnimedWrite = ({
   className,
   delay,
   children,
-  animationDuration
+  animationDuration,
+  pipeAnimed = true
 }: PropsTextContent) => {
   const [textAnimed, setTextAnimed] = useState("");
   const textoArray = children.toString().split("");
+ 
   useEffect(() => {
+    console.log(textoArray)
     setTimeout(
       () => {
         var text = " ";
@@ -34,6 +38,9 @@ export const TextAnimedWrite = ({
       },
       delay ? delay : 0
     );
-  }, []);
-  return <TextAnimed className={className} animationDuration={animationDuration}>{textAnimed}</TextAnimed>;
+  }, [pipeAnimed]);
+  
+  if(textoArray.length == textAnimed.length ) pipeAnimed = false
+  console.log(pipeAnimed)
+  return <TextAnimed className={className} animationDuration={animationDuration}>{textAnimed} {pipeAnimed && <span id="pipeAnimed">|sad</span>}</TextAnimed>;
 };

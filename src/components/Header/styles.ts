@@ -4,6 +4,7 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
+  background-color: #0A0F1B;
   @keyframes zoomHeader {
     from {
       transform: scale(1.2);
@@ -14,22 +15,9 @@ export const HeaderWrapper = styled.div`
       opacity: 9;
     }
   }
-  .imgContainer {
-    position:relative;
-    width: 100%;
-    max-width: 100vw;
-    height: 100vh;
-    
-    .img-header {
-      width: 100vw ;
-      height: 100vh;
-      position: fixed;
-      opacity: 0.9;
-      z-index: -1;
-      animation: zoomHeader 1.5s ease-in 1;
-    }
-  }
+
   .Tilt {
+
     min-width:275px;
     position: absolute;
     top: 30%;
@@ -65,14 +53,13 @@ export const HeaderWrapper = styled.div`
 
 export const Banner = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
   align-items: center;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.5);
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  box-shadow: -10px 15px 50px rgba(0, 0, 0);
+  background: #1f163b;
+  animation: 6s linear pulseShadow infinite   ;
   div:nth-child(2) {
     margin: 30px 10px;
 
@@ -94,6 +81,18 @@ export const Banner = styled.div`
     button {
       margin-left: 20px;
     }
+    @keyframes pulseShadow {
+    100% {
+      box-shadow:0 0 9px -1.5px white, 0 0 100px -15px #36CFD0;
+     
+    }
+    50%{
+      box-shadow:0 0 9px -3px white, 0 0 100px -30px #36CFD0;
+    }
+    0%{
+      box-shadow:0 0 9px -1.5px white, 0 0 100px -15px #36CFD0;
+    }
+  }
   }
   .avatarWrapper {
     width: 150px;

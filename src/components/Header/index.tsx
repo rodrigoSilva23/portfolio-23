@@ -6,27 +6,11 @@ import { useEffect, useState } from "react";
 import { Button } from "../Button";
 
 const Header = () => {
-  const [selectedImg, setSelectedImg] = useState(1);
-  useEffect(() => {
-    const sequenceImage = () => {
-      setTimeout(() => {
-        selectedImg === 3 ? setSelectedImg(1) : setSelectedImg(selectedImg + 1);
-      }, 5000);
-    };
-    sequenceImage();
-  }, [selectedImg]);
-console.log(selectedImg);
+
   return (
     <HeaderWrapper id="home">
    
 
-      <div className="imgContainer">
-        <img
-          src={`/img/img-header${selectedImg}.jpg`}
-          alt="fundoHeader"     
-          className="img-header"
-        />
-      </div>
       <Tilt
         className="Tilt"
         options={{
