@@ -6,7 +6,8 @@ interface PropsTextContent {
   children: any;
   className?: string;
   delay?: number;
-  animationDuration?:string;
+  velocityWrite?: number;
+  animationDuration?: string;
   pipeAnimed?: boolean;
 }
 
@@ -19,13 +20,13 @@ export const TextAnimedWrite = ({
   delay,
   children,
   animationDuration,
+  velocityWrite = 70,
   pipeAnimed = true
 }: PropsTextContent) => {
   const [textAnimed, setTextAnimed] = useState("");
   const textoArray = children.toString().split("");
- 
+
   useEffect(() => {
-    console.log(textoArray)
     setTimeout(
       () => {
         var text = " ";
@@ -33,14 +34,17 @@ export const TextAnimedWrite = ({
           setTimeout(() => {
             text += letra;
             setTextAnimed(text);
-          }, 70 * i);
+          }, velocityWrite * i);
         });
       },
       delay ? delay : 0
     );
   }, [pipeAnimed]);
-  
-  if(textoArray.length == textAnimed.length ) pipeAnimed = false
-  console.log(pipeAnimed)
-  return <TextAnimed className={className} animationDuration={animationDuration}>{textAnimed} {pipeAnimed && <span id="pipeAnimed">|sad</span>}</TextAnimed>;
+
+  if (textoArray.length == textAnimed.length) pipeAnimed = false
+  return (
+    <TextAnimed className={className} animationDuration={animationDuration}>
+      {textAnimed} {pipeAnimed && <span id="pipeAnimed">|</span>}
+    </TextAnimed>
+  );
 };

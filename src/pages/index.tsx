@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <Loading />
       ) : (
         <>
-           <Sidebar />
+          <Sidebar />
           <Header />
           <SectionIntroduction/>
           <SectionSkills/>

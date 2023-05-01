@@ -8,7 +8,7 @@ export const SidebarClassic = styled.div`
     background-color: rgba(255, 255, 255, 0);
     position: fixed;
     top: 0;
-    right: -18rem;
+    right: -20rem;
     transition: 1.5s;
     z-index: 10;
   }
