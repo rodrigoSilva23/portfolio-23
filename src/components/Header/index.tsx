@@ -1,9 +1,5 @@
 import { HeaderWrapper, Banner } from "./styles";
-import Tilt from "react-tilt";
 import Image from "next/image";
-
-import { useEffect, useState } from "react";
-import { Button } from "../Button";
 import { HeroPattern } from "../HeroPattern";
 
 const Header = () => {
@@ -18,7 +14,7 @@ const Header = () => {
               src="https://avatars.githubusercontent.com/u/55798409?v=4"
               alt="avatar"
           width={150}
-          height={150}
+          height={155}
              
             />
           </div>

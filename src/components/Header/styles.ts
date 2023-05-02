@@ -30,7 +30,7 @@ export const Banner = styled.div`
   div:nth-child(2) {
     h1 {
       color: white;
-      font-size: 40px;
+      font-size: 3rem;
       font-family: var(--font-primary);
       font-weight: 200;
       letter-spacing: -0.75px;
@@ -59,12 +59,21 @@ export const Banner = styled.div`
     }
   }
   .avatarWrapper {
+    height: 155px;
     border-radius: 50%;
     border: 1px solid white;
-    margin: 10px 10px;
-    img {
-      border-radius: 50%;
-      animation: 6s linear pulseShadow infinite;
+    overflow: hidden;
+    animation: 6s linear pulseShadow infinite;  
+  }
+
+  @media screen and (max-width: 425px) {
+    div:nth-child(2) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
 `;

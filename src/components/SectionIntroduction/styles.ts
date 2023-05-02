@@ -8,13 +8,18 @@ export const SectionProfile = styled.main`
   align-items: center;
   justify-content: center;
   h1{
+    font-family: var(--font-primary);
     color: white;
-    text-decoration: underline;
+    position: relative;
+
   }
   .textAnimed {
-    margin: 0 20px;
+    margin:20px 100px;
+    
     text-align: justify;
-    line-height: 36px;
+    line-height: 120%;
+    letter-spacing: -0.75px;
+    text-indent: 20px;
     font-size: 1.5rem;
     font-family: var(--font-primary);
   }
