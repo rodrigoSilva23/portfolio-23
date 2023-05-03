@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { TextAnimedWrite } from "../Text/TextContent";
 import { SectionProfile } from "./styles";
-import { motion } from "framer-motion";
 import { TitleAnimated } from "../Title";
 
 export const SectionIntroduction = () => {
@@ -14,7 +13,8 @@ export const SectionIntroduction = () => {
 
   return (
     <SectionProfile id="conhecimentos">
-      <TitleAnimated title="Sobre"/>
+      <TitleAnimated title="Sobre" />
+
       {startTextAnimed && (
         <TextAnimedWrite className="textAnimed " velocityWrite={40}>
           Olá, eu sou Rodrigo dos Santos Silva e atuo como desenvolvedor full

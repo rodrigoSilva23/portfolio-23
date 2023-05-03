@@ -1,76 +1,74 @@
-import { SidebarClassic } from "./styles";
-import { FaLinkedinIn, FaGithubAlt, FaInstagram } from "react-icons/fa";
+import * as React from "react";
+import { useRef } from "react";
+import { motion, useCycle } from "framer-motion";
+import { useDimensions } from "./use-dimensions";
+import styles from "./styles.module.css";
+import { MenuToggle } from "./steps/MenuToggle";
+import { Navigation } from ".//steps/Navigation";
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: "circle(30px at 40px 40px)",
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+const socialMidia = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+};
+interface midia {}
+export const SideBar = ({ itemsFromMenu, midia }: any) => {
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const containerRef = useRef(null);
+  const { height } = useDimensions(containerRef);
 
-const Sidebar = () => {
-  const showSidebar = () => {
-    const sidebar = document.querySelector(".sidebar");
-    sidebar?.classList.toggle("show-menu");
-  };
-
+ 
   return (
-    <SidebarClassic>
-      <aside className="sidebar ">
-        <div className="hamburguer" onClick={showSidebar}>
-          <div className="line" id="line1"></div>
-          <div className="line" id="line2"></div>
-          <div className="line" id="line3"></div>
-          <span>Fechar</span>
-        </div>
-        <nav>
-          <ul className="menu">
-            <li className="menu-item">
-              <a href="#home" className="menu-link">
-                Home
+    <motion.nav
+      initial={false}
+      animate={isOpen ? "open" : "closed"}
+      custom={height}
+      ref={containerRef}
+      className={styles.nav}
+    >
+      <motion.div className={styles.background} variants={sidebar}>
+        {midia && (
+          <motion.div className={styles.socialMidia} variants={socialMidia}>
+            {midia.map((midia: any) => (
+              <a href={midia.href} key={midia.name} target="_blank">
+                {midia.icon}
               </a>
-            </li>
-            <li className="menu-item">
-              <a href="#conhecimentos" className="menu-link">
-                Conhecimento
-              </a>
-            </li>
-            <li className="menu-item">
-              <a href="#projetos" className="menu-link">
-                Projetos
-              </a>
-            </li>
-            <li className="menu-item">
-              <a href="#contatos" className="menu-link">
-                Contato
-              </a>
-            </li>
-            <li className="menu-item">
-              <a href="#orcamentos" className="menu-link">
-                Orçamento
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div className="social-midia">
-          <a
-            href="https://www.instagram.com/rodrigosilva.up/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://github.com/rodrigoSilva23"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithubAlt />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/rodrigo-santos-silva-059b9a193/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedinIn />
-          </a>
-        </div>
-      </aside>
-    </SidebarClassic>
+            ))}
+          </motion.div>
+        )}
+      </motion.div>
+
+      <Navigation itemsFromMenu={itemsFromMenu} />
+      <MenuToggle toggle={() => toggleOpen()} />
+    </motion.nav>
   );
 };
-
-export default Sidebar;

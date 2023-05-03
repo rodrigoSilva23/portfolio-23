@@ -6,16 +6,67 @@ import Header from "../components/Header";
 import { Loading } from "../components/Loading";
 import { SectionIntroduction } from "../components/SectionIntroduction";
 import { SectionProjects } from "../components/SectionProjects";
-import {SectionSkills } from "../components/SectionSkills";
-import Sidebar from "../components/Sidebar";
+import { SectionSkills } from "../components/SectionSkills";
+import { SideBar } from "../components/Sidebar";
+import {
+  FaGithubAlt,
+  FaInstagram,
+  FaHome,
+  FaBook,
+  FaCode,
+  FaEnvelope,
+  FaDollarSign,
+} from "react-icons/fa";
 
+const itemsFromMenu = [
+  {
+    name: "Home",
+    icon: <FaHome />,
+    href: "#home",
+  },
+  {
+    name: "Conhecimento",
+    icon: <FaBook />,
+    href: "#conhecimentos",
+  },
+  {
+    name: "Projetos",
+    icon: <FaCode />,
+    href: "#projetos",
+  },
+  {
+    name: "Contato",
+    icon: <FaEnvelope />,
+    href: "#contato",
+  },
+  {
+    name: "Orçamento",
+    icon: <FaDollarSign />,
+    href: "#orcamento",
+  },
+];
+const midia = [
+  {
+    name: "Linkedin",
+    icon: <FaInstagram />,
+    href: "https://www.instagram.com/rodrigosilva.up/",
+  },
+  {
+    name: "Github",
+    icon: <FaGithubAlt />,
+    href: "https://github.com/rodrigoSilva23",
+  },
+  {
+    name: "Instagram",
+    icon: <FaInstagram />,
+    href: "https://www.linkedin.com/in/rodrigo-santos-silva-dev/",
+  },
+];
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
 
-
- 
   useEffect(() => {
-      setLoading(!loading);
+    setLoading(!loading);
   }, []);
   return (
     <>
@@ -30,11 +81,11 @@ const Home: NextPage = () => {
         <Loading />
       ) : (
         <>
-          <Sidebar />
+          <SideBar midia={midia} itemsFromMenu={itemsFromMenu} />
           <Header />
-          <SectionIntroduction/>
-          <SectionSkills/>
-          <SectionProjects/>
+          <SectionIntroduction />
+          <SectionSkills />
+          <SectionProjects />
           <Footer />
         </>
       )}
