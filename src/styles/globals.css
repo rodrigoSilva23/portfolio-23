@@ -29,3 +29,25 @@ a {
 }
 
   
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #549fa0 #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    
+    background: #629ba5b7;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #549fa0;
+    border-radius:20px;
+    border: 1px solid #ffffff;
+  }

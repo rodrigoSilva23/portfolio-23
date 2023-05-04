@@ -45,9 +45,9 @@ const HeroPattern = () => {
           id="pulse-1"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#8257e6" stopOpacity="0" />
-          <stop stopColor="#8257e6" />
-          <stop offset="1" stopColor="#f142b6" stopOpacity="0" />
+          <stop stopColor="#14a5a5" stopOpacity="0" />
+          <stop stopColor="#14a5a5" />
+          <stop offset="1" stopColor="#00fdfd" stopOpacity="0" />
         </motion.linearGradient>
 
         <linearGradient id="paint0_linear_1967_382" x1="61.5" y1="296" x2="2.51989" y2="296.019" gradientUnits="userSpaceOnUse">
@@ -134,6 +134,7 @@ const HeroPattern = () => {
           <stop stopColor="#323238"/>
           <stop offset="1" stopColor="#323238" stopOpacity="0.3"/>
         </linearGradient>
+        
       </defs>
     </svg>
   )
