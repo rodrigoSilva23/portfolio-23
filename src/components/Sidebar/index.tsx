@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react";
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
@@ -40,21 +41,30 @@ const socialMidia = {
     },
   },
 };
-interface midia {}
+const sidebarIsVisible = {
+  open: {
+    zIndex: 1000,
+  },
+  closed: {
+    zIndex: 1000,
+  },
+};
 export const SideBar = ({ itemsFromMenu, midia }: any) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
- 
+  console.log(containerRef);
   return (
     <motion.nav
       initial={false}
       animate={isOpen ? "open" : "closed"}
+      variants={sidebarIsVisible}
       custom={height}
       ref={containerRef}
       className={styles.nav}
     >
+        <MenuToggle toggle={() => toggleOpen()} />
       <motion.div className={styles.background} variants={sidebar}>
         {midia && (
           <motion.div className={styles.socialMidia} variants={socialMidia}>
@@ -68,7 +78,6 @@ export const SideBar = ({ itemsFromMenu, midia }: any) => {
       </motion.div>
 
       <Navigation itemsFromMenu={itemsFromMenu} />
-      <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );
 };

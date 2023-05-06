@@ -79,5 +79,11 @@ li {
 
 .socialMidia a:hover {
   transition: background-color 0.8s;
-  background-color: rgb(147, 88, 172);
+  background-color: #057c7c;
+}
+
+@media (orientation: landscape) and  (max-height:375px) {
+  .ul {
+    top: 50px;
+  } 
 }

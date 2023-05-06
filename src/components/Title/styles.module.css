@@ -1,0 +1,12 @@
+.h1 {
+  font-family: var(--font-primary);
+  font-size: 2em;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  
+}
+

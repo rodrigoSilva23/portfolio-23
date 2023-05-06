@@ -24,50 +24,7 @@ export const SectionProjects = () => {
     <SectionProjectsContainer id="conhecimentos">
       <h1>Projetos</h1>
       <div>
-        <Swiper
-          loop={true}
-          navigation={true}
-          slidesPerView={1}
-          spaceBetween={30}
-          pagination={{ clickable: true }}
-          modules={[FreeMode, Navigation, Thumbs, EffectFade]}
-          className="container-carousel"
-          breakpoints= {{
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30
-            },
-            480: {
-              slidesPerView: 3,
-              spaceBetween: 30
-            }
 
-          }}
-        >
-          {skills.map((item) => {
-            return (
-              <SwiperSlide key={item.id} className="card-skill">
-                <header>
-                  <span className="text-align-center">
-                    <img src={item.imgFundo} width="30" />
-                    {item.skill}
-                  </span>
-                </header>
-                <main>
-                  <span>{item.description}</span>
-                </main>
-                <img className="img-fundo" src={item.imgFundo} />
-                <footer>
-                  <Button className="text-align-center">
-                    <a href={item.saibaMais} target="_blank" rel='noreferrer'>
-                      Saiba Mais
-                    </a>
-                  </Button>
-                </footer>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
 
       </div>
     </SectionProjectsContainer>

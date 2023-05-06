@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
+import { motion, transform } from 'framer-motion'
 
 const HeroPattern = () => {
   return (
-    <svg id="hero"  width="100vw" height="100vh" viewBox="0 0 1217 679" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg style={{position:'absolute',top:'50%', transform: 'translateY(-35%)'}} id="hero"  width="100vw" height="100vh" viewBox="0 0 1217 679" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M632 168L632 122C632 113.163 639.163 106 648 106L661 106" stroke="url(#pulse-1)" strokeWidth="0.5" strokeDasharray="8 8"/>
       <path d="M690 5.72205e-06L690 90C690 98.8366 682.837 106 674 106L661 106" stroke="url(#pulse-1)" strokeWidth="0.5" strokeDasharray="8 8"/>
       <line x1="584.75" y1="-3.27835e-08" x2="584.75" y2="166" stroke="url(#pulse-1)" strokeWidth="0.5" strokeDasharray="8 8"/>
@@ -39,8 +39,10 @@ const HeroPattern = () => {
           }}
           transition={{
             duration: 5,
+            delay:0.6,
             repeat: Infinity,
-            ease: 'linear'
+            ease: 'linear',
+          
           }}
           id="pulse-1"
           gradientUnits="userSpaceOnUse"
