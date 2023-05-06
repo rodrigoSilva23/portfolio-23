@@ -10,7 +10,6 @@ const Header = () => {
     <HeaderWrapper id="home">
       <HeroPattern />
       <SocialMidias className="social-midia" />
-    
 
       <motion.div
         className="avatarWrapper"
@@ -19,6 +18,7 @@ const Header = () => {
         variants={slideIn({
           direction: "right",
         })}
+        viewport={{ once: true }}
       >
         <Image
           src="https://avatars.githubusercontent.com/u/55798409?v=4"
@@ -34,6 +34,7 @@ const Header = () => {
           variants={slideIn({
             direction: "left",
           })}
+          viewport={{ once: true }}
         >
           Rodrigo dos santos silva
         </motion.h1>
@@ -43,8 +44,9 @@ const Header = () => {
           variants={slideIn({
             direction: "right",
           })}
+          viewport={{ once: true }}
         >
-          Web Developer - Full Stack{" "}
+          Web Developer - Full Stack
         </motion.p>
       </div>
     </HeaderWrapper>

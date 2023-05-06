@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { Footer } from "../components/Footer";
 import Header from "../components/Header";
 import { Loading } from "../components/Loading";
-import { SectionIntroduction } from "../components/SectionIntroduction";
-import { SectionProjects } from "../components/SectionProjects";
-import { SectionSkills } from "../components/SectionSkills";
+import { SectionIntroduction } from "../sections/SectionIntroduction";
+import { SectionProjects } from "../sections/SectionProjects";
+import { SectionSkills } from "../sections/SectionSkills";
 
 
 const Home: NextPage = () => {

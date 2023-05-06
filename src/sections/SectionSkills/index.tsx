@@ -1,12 +1,13 @@
 import { SectionSkillsContainer } from "./styles";
 import { skills } from "./skills";
-import { TitleAnimated } from "../Title";
-import { Carrousel } from "../Carrousel";
+import { TitleAnimated } from "../../components/Title";
+import { Carrousel } from "../../components/Carrousel";
+
 
 export const SectionSkills = () => {
   return (
     <SectionSkillsContainer id="conhecimentos">
-      <TitleAnimated title="Habilidades" sizeIcon={155} />
+      <TitleAnimated  sizeIcon={155} />
       <div className="wrap-carrousel">
         <Carrousel data={skills} />
         

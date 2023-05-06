@@ -41,7 +41,7 @@ export const HeaderWrapper = styled.header`
   @media screen and (max-width: 425px) {
     .content {
       h1 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
       }
       p {
         font-size: 1.5rem;

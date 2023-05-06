@@ -1,12 +1,7 @@
 .h1 {
-  font-family: var(--font-primary);
+  font-family: "Eudoxus Sans", var(--font-primary);
   font-size: 2em;
+  font-weight: 700;
   color: white;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  
+  display: block;
 }
-

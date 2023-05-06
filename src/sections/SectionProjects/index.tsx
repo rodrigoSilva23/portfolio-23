@@ -15,9 +15,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/thumbs";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
-import { useState } from "react";
-import Image from "next/image";
-import { Button } from "../Button";
 
 export const SectionProjects = () => {
   return (
