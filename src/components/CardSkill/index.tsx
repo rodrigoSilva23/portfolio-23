@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { slideIn } from "../../utils/motion";
 import Image from "next/image";
 import styles from "./styles.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type CardSkillProps = {
   id: number;
@@ -23,9 +23,9 @@ export const CardSkill = ({
   description,
   handleClick,
 }: CardSkillProps) => {
-  const [sizeWidth, setSizeWidth] = useState(0);
+  const [sizeWidth, setSizeWidth] = useState(window.innerWidth);
   window.addEventListener("resize", () => setSizeWidth(window.innerWidth));
-  console.log(sizeWidth);
+  
   return (
     <motion.div
       initial="hidden"
@@ -33,10 +33,10 @@ export const CardSkill = ({
       variants={slideIn({
         direction: sizeWidth <= 928 ? "up" : "right",
         type: "spring",
-        delay: index * 0.4,
+        delay: index * 0.2,
         duration: 1.5,
       })}
-      viewport={{ once: true, amount: 0.9 }}
+      viewport={{ once: true, amount: 0.7 }}
       onClick={() => handleClick(id)}
       className={styles.container}
     >

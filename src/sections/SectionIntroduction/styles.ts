@@ -26,8 +26,8 @@ export const SectionProfile = styled.main`
   @media screen and (max-width: 768px) {
    
     .textAnimed {
-      margin: 0 25px;
-      font-size: 1.4rem;
+      margin: 25px;
+      font-size: 1.3rem;
     }
   }
 `;

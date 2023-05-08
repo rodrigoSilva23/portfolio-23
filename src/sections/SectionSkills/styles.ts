@@ -8,12 +8,13 @@ export const SectionSkillsContainer = styled.section`
   flex-direction: column;
   align-items: center;
 
-.container{
-  display: flex;
-  width: 80vw;
-  margin-top:30px
- 
-}
+  .container {
+    display: flex;
+    width: 80vw;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
 
   .highlight {
     padding: 2px;
@@ -21,12 +22,12 @@ export const SectionSkillsContainer = styled.section`
     color: white;
   }
   @media (max-width: 928px) {
-    .container{
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-  margin-top:30px
- 
-}
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80vw;
+      margin-top: 30px;
+    }
   }
 `;
