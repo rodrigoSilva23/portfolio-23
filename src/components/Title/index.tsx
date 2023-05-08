@@ -6,12 +6,14 @@ type TitleAnimated = {
   AxisIconY?: number;
   AxisIconX?: number;
   children?: React.ReactNode;
+  className?: string;
 };
 export const TitleAnimated = ({
   sizeIcon = 100,
   children,
   AxisIconY = -20,
   AxisIconX,
+  className,
 }: TitleAnimated) => {
   return (
     <motion.div
@@ -22,7 +24,7 @@ export const TitleAnimated = ({
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={styles.h1}
+      className={`${styles.h1} ${className}`}
     >
       {children}
       <motion.p>

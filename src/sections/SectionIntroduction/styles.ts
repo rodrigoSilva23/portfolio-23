@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const SectionProfile = styled.main`
-  background-color: var(--bg-primary);
   width: 100%;
-  min-height: 100vh;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +13,7 @@ export const SectionProfile = styled.main`
     color: white;
   }
   .textAnimed {
-    margin: 20px 100px;
+    margin: 30px 120px;
     color: #FFFFFF;
     text-align: justify;
     line-height: 140%;

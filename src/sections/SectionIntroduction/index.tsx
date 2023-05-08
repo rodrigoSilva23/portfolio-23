@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { SectionProfile } from "./styles";
 import { TitleAnimated } from "../../components/Title";
 import { motion } from "framer-motion";
@@ -7,12 +5,6 @@ import { slideIn } from "../../utils/motion";
 import Image from "next/image";
 
 export const SectionIntroduction = () => {
-  const [startTextAnimed, SetStartTextAnimed] = useState(false);
-
-  window.addEventListener("scroll", () => {
-    const getPositionScroll = window.scrollY;
-    if (getPositionScroll >= 170) SetStartTextAnimed(true);
-  });
 
   return (
     <SectionProfile id="conhecimentos">
@@ -26,6 +18,7 @@ export const SectionIntroduction = () => {
         whileInView="show"
         variants={slideIn({
           direction: "up",
+          delay: 0,
         })}
         viewport={{ once: true }}
       >
@@ -41,14 +34,15 @@ export const SectionIntroduction = () => {
         soluções criativas e inovadoras como um desenvolvedor full stack.
       </motion.p>
       <motion.div
-         initial="hidden"
-         whileInView="show"
-         variants={slideIn({
-           direction: "up",
-         })}
-         viewport={{ once: true }}
-       >
-      
+        initial="hidden"
+        whileInView="show"
+        variants={slideIn({
+          direction: "up",
+          type: "spring",
+          duration: 1.5,
+        })}
+        viewport={{ once: true }}
+      >
         <Image src="/foguete.png" alt="avatar" width={170} height={170} />
       </motion.div>
     </SectionProfile>

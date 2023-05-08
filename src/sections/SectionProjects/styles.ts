@@ -2,13 +2,7 @@ import styled from "styled-components";
 
 export const SectionProjectsContainer = styled.section`
   width: 100%;
-  min-height: 100vh;
-  background: white;
-  padding-bottom: 20px;
-  background-color: black;
-  border-top: 1px solid #36cfd0;
-  border-bottom: 1px solid #36cfd0;
-
+ 
   div:first-child {
     display:flex;
     align-items: center;

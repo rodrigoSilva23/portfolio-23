@@ -15,7 +15,6 @@ export const HeaderWrapper = styled.header`
     border-radius: 50%;
     border: 1px solid white;
     overflow: hidden;
-
     animation: 6s linear pulseShadow infinite;
   }
   .content {
@@ -25,14 +24,13 @@ export const HeaderWrapper = styled.header`
       font-family: var(--font-primary);
       font-weight: 200;
       letter-spacing: -0.75px;
-      text-shadow: 0.2rem 0.25rem 2px rgba(0, 0, 0, 0.4);
+
     }
     p {
       font-family: var(--font-secondary);
       letter-spacing: 1px;
       color: white;
       font-size: 2rem;
-      text-shadow: 0.1rem 0.14rem 1.7px rgba(0, 0, 0, 0.4);
       font-weight: 400;
       margin-bottom: 10px;
     }
