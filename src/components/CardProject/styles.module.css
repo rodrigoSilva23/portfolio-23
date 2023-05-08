@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   max-width: 470px;
+  min-width: 300px;
   min-height: 300px;
   
   font-family: var(--font-primary);

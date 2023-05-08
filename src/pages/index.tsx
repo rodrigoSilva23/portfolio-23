@@ -20,13 +20,13 @@ const Home: NextPage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <>  
+        <div>  
           <Header />
           <SectionIntroduction />
           <SectionSkills />
           <SectionProjects />
           <Footer />
-        </>
+        </div>
       )}
     </>
   );

@@ -22,15 +22,14 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <motion.div
-      initial="hidden"
-      whileInView="show"
-      variants={slideIn({
-        direction: "up",
-        type: "spring",
-        duration: 1.5,
-        delay: index * 0.2,
-      })}
-      viewport={{ once: true }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        duration: 1,
+        ease: "easeInOut",
+        delay: index * 0.3
+      }}
+      viewport={{ once: true ,amount:0.7}}
       className={styles.container}
     >
       <div className={styles.wrapImege}>
