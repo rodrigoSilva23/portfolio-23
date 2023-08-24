@@ -3,18 +3,16 @@ import styles from "./styles.module.css";
 import { FaGithubAlt, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { slideIn } from "../../utils/motion";
 
-type SocialMidias = {
+type SocialMidiasProps = {
   className?: string;
-  isAnimation?: boolean;
   direction?: "left" | "right" | "up" | "down";
   delay?: number;
 };
 export const SocialMidias = ({
   className,
-  isAnimation = false,
   direction = "left",
   delay = 2,
-}: SocialMidias) => {
+}: SocialMidiasProps) => {
   return (
     <motion.div
       className={`${styles.container} ${className}`}
