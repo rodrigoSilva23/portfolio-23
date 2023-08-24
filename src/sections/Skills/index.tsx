@@ -1,17 +1,18 @@
 "use client";
-import { SectionSkillsContainer } from "./styles";
+import { SkillsContainer } from "./styles";
 import { skills } from "./skills";
 import { TitleAnimated } from "../../components/Title";
 import { CardSkill } from "../../components/CardSkill";
 import { useState } from "react";
+import { Highlight } from "../../components/Highlight";
 
-export const SectionSkills = () => {
-  const [IdSkill, setIdSkill] = useState<number>(0);
+export const Skills = () => {
+  const [IdSkill, setIdSkill] = useState<number>(1);
 
   return (
-    <SectionSkillsContainer id="conhecimentos">
+    <SkillsContainer id="conhecimentos">
       <TitleAnimated AxisIconX={74} sizeIcon={120}>
-        Conquista de <span className="highlight">Habilidades</span> na Jornada
+        Conquista de <Highlight content="Habilidades"/> na Jornada
       </TitleAnimated>
       <div className="container">
         {skills.map((skill, index) => (
@@ -24,6 +25,6 @@ export const SectionSkills = () => {
           />
         ))}
       </div>
-    </SectionSkillsContainer>
+    </SkillsContainer>
   );
 };
