@@ -1,33 +1,21 @@
-
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
-import { Footer } from "../components/Footer";
-import Header from "../components/Header";
+import { Footer } from "../components/template/Footer";
+import Header from "../components/template/Header";
 import { Loading } from "../components/Loading";
-import { SectionIntroduction } from "../sections/SectionIntroduction";
-import { SectionProjects } from "../sections/SectionProjects";
-import { SectionSkills } from "../sections/SectionSkills";
-
+import { About, Projects, Skills } from "../sections";
+import { Content } from "../components/template/content";
 
 const Home: NextPage = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(!loading);
-  }, []);
   return (
     <>
-      {loading ? (
-        <Loading />
-      ) : (
-        <div>  
-          <Header />
-          <SectionIntroduction />
-          <SectionSkills />
-          <SectionProjects />
-          <Footer />
-        </div>
-      )}
+      <Header />
+      <Content>
+        <About />
+        <Skills />
+        <Projects />
+      </Content>
+      <Footer />
     </>
   );
 };

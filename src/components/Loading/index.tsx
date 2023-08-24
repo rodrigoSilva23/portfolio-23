@@ -1,9 +1,8 @@
-import Head from "next/head";
 import { LoadingWrapper } from "./styles";
 
 export const Loading = () => {
   return (
-    <LoadingWrapper >
+    <LoadingWrapper>
       <div className="socket">
         <div className="gel center-gel">
           <div className="hex-brick h1"></div>
