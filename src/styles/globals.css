@@ -3,7 +3,16 @@
   --font-primary: "Eudoxus Sans", serif;
   --font-secondary: "Josefin Slab", serif;
   --font-action: "Muli", serif;
-  --bg-primary:#0a0f1b;
+  --primary-100:#0D6E6E;
+  --primary-200:#4a9d9c;
+  --primary-300:#afffff;
+  --accent-100:#FF3D3D;
+  --accent-200:#ffe0c8;
+  --text-100:#FFFFFF;
+  --text-200:#e0e0e0;
+  --bg-100:#0D1F2D;
+  --bg-200:#1d2e3d;
+  --bg-300:#354656;
 }
 
 html,
@@ -15,7 +24,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 14px;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-100);
     overflow-x: clip;
 
 }
@@ -36,21 +45,17 @@ a {
   /* Firefox */
   * {
     scrollbar-width: auto;
-    scrollbar-color: #549fa0 #ffffff00;
+    scrollbar-color: --primary-200  #ffffff00;
   }
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
 
-  *::-webkit-scrollbar-track {
-    
-    background: #629ba5b7;
-  }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #549fa0;
+    background-color: var(--primary-100);
     border-radius:20px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--text-200);
   }

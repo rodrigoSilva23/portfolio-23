@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./styles.module.css";
 import React from "react";
-type TitleAnimated = {
+type TitleAnimatedProps = {
   sizeIcon?: number;
   AxisIconY?: number;
   AxisIconX?: number;
@@ -14,12 +14,12 @@ export const TitleAnimated = ({
   AxisIconY = -20,
   AxisIconX,
   className,
-}: TitleAnimated) => {
+}: TitleAnimatedProps) => {
   return (
     <motion.div
       initial={{
         opacity: 0,
-        y: '100%',
+        y: "100%",
       }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -27,14 +27,14 @@ export const TitleAnimated = ({
       className={`${styles.h1} ${className}`}
     >
       {children}
-      <motion.p>
         <motion.div
           initial={{
-            display:'none',
+            display: "none",
             y: AxisIconY,
             x: AxisIconX,
           }}
-        >
+          >
+          <motion.p>
           <svg
             fill="none"
             height={50}
@@ -54,8 +54,8 @@ export const TitleAnimated = ({
               </clipPath>
             </defs>
           </svg>
-        </motion.div>
       </motion.p>
+        </motion.div>
     </motion.div>
   );
 };
