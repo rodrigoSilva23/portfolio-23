@@ -12,6 +12,7 @@ export const ProjectsContainer = styled.section`
     margin: 40px 0;
   }
   .project-wrapper {
+    margin-right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
