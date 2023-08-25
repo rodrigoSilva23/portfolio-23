@@ -21,6 +21,10 @@ export const SkillsContainer = styled.section`
       margin:5px;
       background:transparent;
       animation: 6s linear pulseShadow infinite;
+       transition: transform .2s linear;
+      :hover{
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -38,7 +42,6 @@ export const SkillsContainer = styled.section`
   @media (max-width: 928px) {
     .container {
       display: flex;
-      flex-direction: column;
       align-items: center;
       width: 80vw;
       margin-top: 30px;

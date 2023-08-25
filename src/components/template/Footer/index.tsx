@@ -11,7 +11,7 @@ export const Footer = () => {
              &nbsp;RodrigoSilva - Todos os direitos reservados
           </span>
         </p>
-        <SocialMidias  direction="right" delay={0}/>
+        <SocialMidias  direction="right" delay={0} />
         </div>
     </FooterComponent>
   );

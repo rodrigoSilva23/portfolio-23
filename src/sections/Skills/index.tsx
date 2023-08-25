@@ -7,14 +7,14 @@ import { Highlight } from "../../components/Highlight";
 
 export const Skills = () => {
   return (
-    <SkillsContainer id="conhecimentos">
+    <SkillsContainer>
       <TitleAnimated AxisIconX={74} sizeIcon={120}>
         Conquista de <Highlight content="Habilidades" /> na Jornada
       </TitleAnimated>
       <div className="container">
         {skills.map((skill) => (
           <motion.img
-            initial={{ opacity: 0, borderRadius: "50%" }}
+            initial={{ opacity: 0, borderRadius: "50%"}}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 5, delay: skill.id * 0.1 }}
           

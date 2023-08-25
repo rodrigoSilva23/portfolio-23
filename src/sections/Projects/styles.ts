@@ -7,20 +7,14 @@ export const ProjectsContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom:10px;
-  .highlight {
-    padding: 2px;
-    background: linear-gradient(90deg, var( --primary-100) 2%, var( --primary-200)100.78%);
-    color: var(--text-100);
-  }
-  .title{
+  padding-bottom: 10px;
+  .title {
     margin: 40px 0;
   }
- .wrap-cards{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap:wrap;
+  .project-wrapper {
+    display: grid;
+   grid-template-columns:  1fr 1fr;
+}
 
-  }
+
 `;
