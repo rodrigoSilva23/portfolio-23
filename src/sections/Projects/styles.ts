@@ -12,9 +12,9 @@ export const ProjectsContainer = styled.section`
     margin: 40px 0;
   }
   .project-wrapper {
-    display: grid;
-   grid-template-columns:  1fr 1fr;
-}
-
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 `;
